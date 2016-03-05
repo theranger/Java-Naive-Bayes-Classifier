@@ -1,12 +1,6 @@
 package de.daslaboratorium.machinelearning.classifier;
 
-import java.util.Collection;
-import java.util.Dictionary;
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Abstract base extended by any concrete classifier.  It implements the basic
@@ -28,7 +22,7 @@ public abstract class Classifier<T, K> implements IFeatureProbability<T, K> {
 
     /**
      * Initial capacity of feature dictionaries. It should be quite big, because
-     * the features will quickly outnumber the categories. 
+     * the features will quickly outnumber the categories.
      */
     private static final int INITIAL_FEATURE_DICTIONARY_CAPACITY = 32;
 
@@ -258,7 +252,7 @@ public abstract class Classifier<T, K> implements IFeatureProbability<T, K> {
 
     /**
      * Retrieves the number of occurrences of the given category.
-     * 
+     *
      * @param category The category, which count should be retrieved.
      * @return The number of occurrences.
      */
